@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f4ee" />
+  <meta name="description" content="From a real photo to a 3D avatar that follows your cursor. Sasi's hands-on guide using AI image generation, Google Flow, Codex, GitHub and Vercel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Make your portfolio look back — by Sasi" />
+  <meta property="og:description" content="Real photo → 3D avatar → head-turn video → interactive website. A step-by-step build guide with live demo and copyable prompts." />
+  <title>Make your portfolio look back — Sasi's build guide</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23221f1e'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='41' font-family='Arial' font-weight='bold' fill='%23F7F4EE'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body id="top" tabindex="-1">
+  <a class="skip-link" href="#guide">Skip to the guide</a>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="Sasi build guide home"><span class="brand-mark">s.</span><span class="brand-copy">SASI <small>BUILD NOTES / 001</small></span></a>
+      <nav id="siteNav" class="site-nav" aria-label="Primary navigation">
+        <a href="#story">The story</a>
+        <a href="#guide">The guide</a>
+        <a href="#playground">Try it live</a>
+        <a href="#publish">Publish</a>
+      </nav>
+      <a class="header-cta" href="#playground">Try the effect <span aria-hidden="true">↗</span></a>
+      <button class="mobile-menu-btn" id="menuButton" type="button" aria-controls="siteNav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-rule"></span> A DIY CREATIVE BUILD GUIDE <span class="edition">VOL. 001 / 2026</span></div>
+        <h1 id="heroTitle">I made my<br>portfolio <em>look back.</em></h1>
+        <p class="hero-description">I turned my own photos into a 3D avatar, then used a short video to make it follow the cursor.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#guide">See how I built it <span aria-hidden="true">↘</span></a>
+          <a class="btn btn-ghost" href="#playground">Try it yourself <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta"><span class="stack-dot"></span> MADE WITH AI + GOOGLE FLOW + CODEX <span class="meta-divider"></span> BY SASI</div>
+      </div>
+      <div class="hero-visual" aria-label="A stylized 3D version of Sasi next to the real reference photo">
+        <div class="hero-visual-top"><span>THE EXPERIMENT</span><span class="series-number">SASI / 001</span></div>
+        <img class="hero-avatar" src="assets/avatar-master.webp" alt="Sasi's stylized 3D avatar wearing a charcoal jacket, based on his real photographs" width="1097" height="1200" fetchpriority="high" />
+        <div class="photo-tag">AFTER<br><strong>3D TWIN</strong></div>
+        <div class="real-photo-mini"><img src="assets/real-portrait.webp" alt="Original real reference portrait of Sasi" width="1100" height="1100" /><span>BEFORE · REAL ME</span></div>
+        <div class="hero-visual-bottom"><span>REAL → RENDERED</span><span>PORTRAIT STUDY</span></div>
+      </div>
+      <div class="hero-index" aria-hidden="true">SCROLL TO LEARN <span>↓</span></div>
+    </section>
+
+    <section class="marquee-strip" aria-label="Build stages">
+      <div class="marquee-inner"><span>REAL PHOTO</span><b>✳</b><span>STYLISED AVATAR</span><b>✳</b><span>7 ANGLES</span><b>✳</b><span>GOOGLE FLOW</span><b>✳</b><span>CURSOR TRACKING</span><b>✳</b><span>DEPLOY TO VERCEL</span></div>
+    </section>
+
+    <section class="story section-pad shell" id="story" tabindex="-1" aria-labelledby="storyTitle">
+      <div class="section-topline"><span>00 / THE IDEA</span><span>WHAT STARTED IT ALL</span></div>
+      <div class="story-grid">
+        <div class="story-heading"><h2 id="storyTitle">What if a website could <em>notice you?</em></h2><p>I saw a portfolio where the character seemed to follow the mouse. Rather than building a complex 3D model, I tried a simpler approach: make a head-turn video, then connect the video's timeline to the cursor.</p></div>
+        <div class="story-quick-stats" aria-label="Project summary"><div><strong>01</strong><span>Real person</span></div><div><strong>07</strong><span>Reference angles</span></div><div><strong>01</strong><span>Head-turn video</span></div><div><strong>06</strong><span>Tutorial steps</span></div></div>
+      </div>
+    </section>
+
+    <section class="playground-wrap" id="playground" tabindex="-1" aria-labelledby="playTitle">
+      <div class="shell playground-grid">
+        <div class="play-copy">
+          <div class="section-topline light-line"><span>LIVE PLAYGROUND</span><span>NOT JUST A VIDEO</span></div>
+          <h2 id="playTitle">Go on.<br><em>Move your cursor.</em></h2>
+          <p>Move left or right over the character to pick a frame from the head-turn video.</p>
+          <div class="play-instructions"><div class="mouse-symbol" aria-hidden="true">↔</div><div><b>Move your mouse over the portrait</b><small>On a phone or using a keyboard? Use the slider underneath.</small></div></div>
+          <div class="play-note"><span class="play-note-dot"></span> ACTUAL VIDEO FROM THIS PROJECT</div>
+        </div>
+        <div class="demo-side">
+          <div class="demo-surface" id="demoSurface">
+            <img class="demo-poster" src="assets/cursor-poster.webp" alt="Sasi’s 3D avatar facing forward" loading="lazy" hidden />
+            <video id="cursorVideo" class="cursor-video" src="assets/cursor-turn.mp4" preload="metadata" muted playsinline poster="assets/cursor-poster.webp" aria-label="Sasi’s 3D avatar turning its head from left to right"></video>
+            <div class="demo-top-label"><span class="live-dot"></span> INTERACTIVE DEMO <span class="demo-number">01 / 01</span></div>
+            <div class="demo-bottom-label"><span>← LOOK LEFT</span><span>LOOK RIGHT →</span></div>
+            <div class="demo-cursor" id="demoCursor" aria-hidden="true">↗</div>
+          </div>
+          <div class="demo-controls"><label for="poseRange">HEAD DIRECTION</label><input type="range" id="poseRange" min="0" max="100" value="50" aria-valuetext="Centre, 50 percent" /><span id="poseLabel" aria-hidden="true">CENTRE · 50%</span></div>
+          <p class="demo-status" id="demoStatus" role="status" hidden>Video unavailable. Showing the avatar’s still image.</p>
+          <p class="demo-footnote">This demo scrubs an opaque MP4. One continuous turn lets the cursor move the head smoothly in either direction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide section-pad shell" id="guide" tabindex="-1" aria-labelledby="guideTitle">
+      <div class="section-topline"><span>01–06 / THE PROCESS</span><span>FROM SELFIE TO WEBSITE</span></div>
+      <div class="guide-intro"><h2 id="guideTitle">The whole build,<br><em>step by step.</em></h2><p>Everything below is based on the actual process and assets I used. You can follow it with your own photos, style and portfolio content.</p></div>
+      <div class="step-list">
+        <article class="step-card" id="step-photo">
+          <div class="step-content"><span class="step-id">STEP 01 <span>—</span> START HERE</span><h3>Start with a photo that actually looks like you.</h3><p>Use a clear portrait with your real hairstyle, skin tone and facial features. A second photo can help preserve details the main portrait misses.</p><div class="step-tip">MY TIP <span>Use the photo as the identity reference, not the art-style reference.</span></div></div>
+          <div class="step-media photos-pair"><figure class="photo-main"><img src="assets/real-portrait.webp" loading="lazy" alt="Sasi's front-facing portrait used for creating the avatar"/><figcaption>01 / MAIN PORTRAIT</figcaption></figure><figure class="photo-secondary"><img src="assets/real-selfie.webp" loading="lazy" alt="Sasi's additional reference selfie"/><figcaption>02 / SECOND REFERENCE</figcaption></figure></div>
+        </article>
+        <article class="step-card">
+          <div class="step-content"><span class="step-id">STEP 02 <span>—</span> CHARACTER DESIGN</span><h3>Turn that photo into a stylised 3D twin.</h3><p>Generate a front-facing master avatar. Keep the real facial identity, black hairstyle, moustache and beard pattern. Choose a polished but slightly playful 3D look.</p><button class="text-action" type="button" data-prompt="avatar">Copy my avatar prompt <span aria-hidden="true">↗</span></button></div>
+          <div class="step-media master-media"><img src="assets/avatar-master.webp" loading="lazy" alt="Front-facing 3D master avatar of Sasi in a charcoal overshirt"/><span class="image-corner-label">MASTER FRAME · 0°</span></div>
+        </article>
+        <article class="step-card step-angles">
+          <div class="step-content"><span class="step-id">STEP 03 <span>—</span> KEEP IT CONSISTENT</span><h3>Make a turntable of seven reference angles.</h3><p>Generate −60°, −40°, −20°, 0°, +20°, +40° and +60°. Keep the camera fixed, clothes unchanged and shoulders aligned. These are references for animation, not a flipbook to swap on the site.</p><div class="step-tip">WATCH OUT <span>Independent AI images may shift facial features or framing. Review and align them before animation.</span></div></div>
+          <div class="step-media angle-media"><div class="angle-headline"><span>7 DIRECTIONS</span><span>ONE IDENTITY</span></div>
+            <div class="angles-grid" id="angleGrid">
+              <figure><img src="assets/angle-01.webp" alt="Avatar looking far left" loading="lazy"><figcaption>−60°</figcaption></figure>
+              <figure><img src="assets/angle-02.webp" alt="Avatar looking left" loading="lazy"><figcaption>−40°</figcaption></figure>
+              <figure><img src="assets/angle-03.webp" alt="Avatar looking slightly left" loading="lazy"><figcaption>−20°</figcaption></figure>
+              <figure><img src="assets/angle-04.webp" alt="Avatar looking straight ahead" loading="lazy"><figcaption>0°</figcaption></figure>
+              <figure><img src="assets/angle-05.webp" alt="Avatar looking slightly right" loading="lazy"><figcaption>+20°</figcaption></figure>
+              <figure><img src="assets/angle-06.webp" alt="Avatar looking right" loading="lazy"><figcaption>+40°</figcaption></figure>
+              <figure><img src="assets/angle-07.webp" alt="Avatar looking far right" loading="lazy"><figcaption>+60°</figcaption></figure>
+            </div>
+          </div>
+        </article>
+        <article class="step-card">
+          <div class="step-content"><span class="step-id">STEP 04 <span>—</span> ANIMATE IN GOOGLE FLOW</span><h3>Animate the head. Freeze everything else.</h3><p>In Google Flow, use Video → Frames with the far-left image as your start frame and far-right as your end frame, where that option is available. Ask for one steady turn, fixed camera and an unchanged face.</p><p>My initial video moved back and forth. I trimmed it to a single turn so that moving the cursor in one direction won’t make the head reverse mid-gesture.</p><button class="text-action" type="button" data-prompt="flow">Copy my Google Flow prompt <span aria-hidden="true">↗</span></button><a class="secondary-link" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener noreferrer">Open Google Flow ↗</a></div>
+          <div class="step-media flow-media"><div class="flow-mini-head">FRAMES TO VIDEO <span>GOOGLE FLOW</span></div><div class="flow-frames"><img src="assets/angle-01.webp" alt="Far-left starting frame"><span class="flow-arrow" aria-hidden="true">→</span><img src="assets/angle-07.webp" alt="Far-right ending frame"></div><div class="flow-seq">START FRAME <span>ONE CONTINUOUS HEAD TURN</span> END FRAME</div></div>
+        </article>
+        <article class="step-card">
+          <div class="step-content"><span class="step-id">STEP 05 <span>—</span> CONNECT IT TO THE CURSOR</span><h3>Build the hero in Codex. Let the cursor scrub.</h3><p>Map the cursor’s horizontal position over the demo to a point in the video. Keep only the latest target and wait for the current seek to finish before starting another. On touch screens, the slider controls the same timeline.</p><button class="text-action" type="button" data-prompt="codex">Copy my Codex build prompt <span aria-hidden="true">↗</span></button><a class="secondary-link" href="#playground">Try the working example ↗</a></div>
+          <div class="step-media code-media"><div class="code-window"><div class="code-bar"><span><i></i><i></i><i></i></span>cursor-tracking.js <small>DEMO CONCEPT</small></div><pre><code><span class="c-purple">const</span> box = demo.getBoundingClientRect();
+<span class="c-purple">const</span> x = (event.clientX - box.left)
+          / box.width;
+
+<span class="c-gray">// Keep the latest target; seek when ready.</span>
+requestProgress(Math.min(1, Math.max(0, x)));</code></pre></div><div class="code-caption">LITTLE CODE. BIG PERSONALITY.</div></div>
+        </article>
+        <article class="step-card" id="publish" tabindex="-1">
+          <div class="step-content"><span class="step-id">STEP 06 <span>—</span> GO LIVE</span><h3>GitHub first. Vercel next. Share the link.</h3><p>Build locally, push the finished project to GitHub, then import that repository into Vercel. Every new push to your production branch can trigger a fresh deployment.</p><a class="text-action as-link" href="#ship-guide">See publishing instructions <span aria-hidden="true">↗</span></a></div>
+          <div class="step-media deploy-media"><div class="deploy-connection"><div class="platform-box"><span class="platform-glyph">⌘</span><strong>CODE</strong><small>YOUR COMPUTER</small></div><span class="deploy-line">→</span><div class="platform-box"><svg aria-hidden="true" width="42" height="42" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.558 21.925c.563.105.768-.244.768-.54 0-.266-.01-.974-.015-1.912-3.126.679-3.786-1.506-3.786-1.506-.512-1.3-1.249-1.646-1.249-1.646-1.02-.697.077-.684.077-.684 1.128.079 1.722 1.158 1.722 1.158 1.002 1.718 2.628 1.221 3.268.933.101-.726.392-1.221.713-1.502-2.495-.284-5.119-1.247-5.119-5.558 0-1.228.439-2.232 1.157-3.02-.117-.284-.502-1.431.111-2.983 0 0 .943-.302 3.094 1.153a10.78 10.78 0 0 1 5.63 0C15.2 5.775 16.14 6.077 16.14 6.077c.615 1.552.228 2.699.113 2.984.719.788 1.155 1.792 1.155 3.02 0 4.322-2.628 5.27-5.131 5.549.404.35.762 1.038.762 2.092 0 1.51-.015 2.727-.015 3.097 0 .3.202.65.774.538A11.252 11.252 0 0 0 12 .75Z"/></svg><strong>GITHUB</strong><small>YOUR REPOSITORY</small></div><span class="deploy-line">→</span><div class="platform-box"><span class="vercel-mark" aria-hidden="true">▲</span><strong>VERCEL</strong><small>LIVE WEBSITE</small></div></div><span class="deploy-end">LOCAL → REPOSITORY → PUBLIC LINK</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="prompts-section section-pad" id="prompts" aria-labelledby="promptTitle"><div class="shell"><div class="section-topline"><span>THE ACTUAL BUILD PROMPTS</span><span>COPY / ADAPT / CREATE</span></div><div class="prompts-intro"><h2 id="promptTitle">Steal the <em>process.</em><br>Make it your own.</h2><p>Use your own face, style and personal details. These prompts are starting points, not guarantees of perfect AI consistency.</p></div><div class="prompt-workspace"><div class="prompt-tabs" role="tablist" aria-label="Choose a prompt"><button role="tab" type="button" data-tab="avatar" id="tab-avatar" aria-controls="promptPanel" aria-selected="true">01 / CHARACTER</button><button role="tab" type="button" data-tab="flow" id="tab-flow" aria-controls="promptPanel" aria-selected="false" tabindex="-1">02 / ANIMATION</button><button role="tab" type="button" data-tab="codex" id="tab-codex" aria-controls="promptPanel" aria-selected="false" tabindex="-1">03 / WEBSITE</button></div><div class="prompt-content" id="promptPanel" role="tabpanel" aria-labelledby="tab-avatar"><div class="prompt-content-heading"><div><span class="prompt-kicker">READY TO COPY</span><h3 id="promptActiveTitle">Generate your 3D avatar</h3></div><button class="btn btn-dark prompt-copy" type="button" id="copyActive">Copy prompt <span aria-hidden="true">↗</span></button></div><pre id="promptText" tabindex="0"></pre></div></div></div></section>
+
+    <section class="ship-section section-pad shell" id="ship-guide" tabindex="-1" aria-labelledby="shipTitle"><div class="section-topline"><span>SHIP IT / GITHUB → VERCEL</span><span>NO BACKEND REQUIRED</span></div><div class="ship-layout"><div><h2 id="shipTitle">Don't just build it.<br><em>Put it online.</em></h2><p>This guide is a lightweight static website. You can upload it to a GitHub repository and import it into Vercel. The same approach works for your own portfolio.</p><a class="btn btn-outline" href="https://vercel.com/new" target="_blank" rel="noopener noreferrer">Import into Vercel <span aria-hidden="true">↗</span></a></div><div class="ship-steps"><div class="ship-row"><span>01</span><div><h3>Put your files in a GitHub repo</h3><p>Create an empty GitHub repository. Choose its visibility before you push your files, especially if they include personal photos.</p></div></div><div class="command-box"><pre><code id="gitCommands">git init -b main
+git add .
+git commit -m "Launch avatar guide"
+git remote add origin YOUR_GITHUB_REPO_URL
+git push -u origin main</code></pre><button type="button" class="command-copy" aria-label="Copy Git commands" id="copyGit">Copy</button></div><div class="ship-row"><span>02</span><div><h3>Import the repository in Vercel</h3><p>Go to Vercel → Add New → Project → choose the GitHub repository. Choose Other, leave the root directory at the repository root, and serve the public folder. This site needs no install or build command.</p></div></div><div class="ship-row"><span>03</span><div><h3>Test, then share</h3><p>Open the deployed URL, test the cursor demo on desktop, check the mobile slider, and only then share the guide with your audience.</p></div></div></div></div></section>
+
+    <section class="closing"><div class="shell closing-inner"><span class="closing-kicker">YOUR TURN NOW</span><h2>Make something<br>that <em>looks back.</em></h2><p>Start with a photo. End with a website people want to play with.</p><div class="closing-actions"><a class="btn btn-light" href="#guide">Build yours <span aria-hidden="true">↗</span></a><a class="btn btn-transparent" href="#playground">Play with the demo <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="footer shell"><div><a href="#top" class="footer-brand">SASI<span>.</span></a><p>An independent creative build log.<br>Made to share the process, not just the result.</p></div><div class="footer-side"><span>PHOTO → 3D → MOTION → WEB</span><a href="#top">BACK TO TOP ↑</a><small>© <span id="year">2026</span> Sasi. Original character and photographs.</small></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
